@@ -1,0 +1,6 @@
+.navbar_container {
+  @apply flex items-center justify-between py-4;
+}
+.navbar_logo {
+  @apply w-[150px] md:w-[230px];
+}
