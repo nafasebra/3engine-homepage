@@ -1,39 +1,43 @@
-import React from 'react'
+import React from "react";
 
-import Style from './Footer.module.css'
-import { Container } from '@/components/index'
+import Style from "./Footer.module.css";
+import { Container } from "@/components/index";
 
-import { DiscordIcon, LinkedinIcon, TwitterIcon } from '@/assets/icons'
+import { DiscordIcon, LinkedinIcon, TwitterIcon } from "@/assets/icons";
 
 function Footer() {
   return (
     <footer>
       <Container otherClass={Style.footer_container}>
-        <p>
+        <p className={Style.footer_copyright}>
           © 2023 3Engine. All rights reserved.
         </p>
-        <div className='flex items-center gap-8'>
-          <ul className='flex items-center gap-4'>
+        <div className={Style.footer_links}>
+          <ul className={Style.footer_list__links}>
             <li>
-              <a href="#" className='underline'>Privacy</a>
+              <a href="#" className="underline underline-offset-4">
+                Privacy
+              </a>
             </li>
             <li>
-              <a href="#" className='underline'>terms and condition</a>
+              <a href="#" className="underline underline-offset-4">
+                terms and condition
+              </a>
             </li>
           </ul>
-          <ul className='flex items-center gap-4'>
+          <ul className={Style.footer_list__links}>
             <li>
-              <a href="#" className='hover:text-blue-500 transition-colors'>
+              <a href="#">
                 <TwitterIcon />
               </a>
             </li>
             <li>
-              <a href="#" className='hover:text-blue-500 transition-colors'>
+              <a href="#">
                 <LinkedinIcon />
               </a>
             </li>
             <li>
-              <a href="#" className='hover:text-blue-500 transition-colors'>
+              <a href="#">
                 <DiscordIcon />
               </a>
             </li>
@@ -41,7 +45,7 @@ function Footer() {
         </div>
       </Container>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

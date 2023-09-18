@@ -2,3 +2,15 @@
   @apply flex items-center justify-between gap-4 bg-black/10;
   backdrop-filter: blur(15px);
 }
+.footer_copyright {
+  @apply font-light text-sm;
+}
+.footer_links {
+  @apply flex items-center gap-8;
+}
+.footer_list__links {
+  @apply flex items-center gap-4;
+}
+.footer_list__links a {
+  @apply hover:text-blue-500 transition-colors;
+}
