@@ -1,5 +1,5 @@
 .footer_container {
-  @apply flex items-center justify-between gap-4 bg-black/10;
+  @apply flex items-center justify-between gap-4 bg-black/10 py-4;
   backdrop-filter: blur(15px);
 }
 .footer_copyright {
