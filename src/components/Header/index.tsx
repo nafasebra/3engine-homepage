@@ -6,7 +6,9 @@ import { Container } from '..'
 
 import threeDBox from '@/assets/images/3d-box-colorize.png';
 import laptopImage from '@/assets/images/laptop-homepage.png';
-
+import ringCircle from '@/assets/images/circle-ring-white.svg';
+import blueCircle from '@/assets/images/circle-blue.svg';
+import pinkCircle from '@/assets/images/circle-pink.svg';
 
 function Header() {
   return (
@@ -18,6 +20,21 @@ function Header() {
           </div>
           <div className='absolute -top-[50px] right-[30px] -z-[3]'>
             <Image src={laptopImage} alt="laptopHomepage" width={250} height={0} className="w-[230px]" />
+          </div>
+          <div className='absolute -top-[10px] left-[100px] -z-[3]'>
+            <Image src={ringCircle} alt="ring-circle" width={50} height={0} className="w-[50px]" />
+          </div>
+          <div className='absolute -top-[10px] left-[48%] -z-[3]'>
+            <Image src={ringCircle} alt="ring-circle" width={50} height={0} className="w-[50px]" />
+          </div>
+          <div className='absolute top-[150px] left-[50%] -z-[3]'>
+            <Image src={ringCircle} alt="ring-circle" width={50} height={0} className="w-[50px]" />
+          </div>
+          <div className='absolute top-[25px] -left-[40px] -z-[3]'>
+            <Image src={blueCircle} alt="blue-circle" width={25} height={0} className="w-[15px]" />
+          </div>
+          <div className='absolute bottom-[30px] right-0 -z-[3]'>
+            <Image src={pinkCircle} alt="pink-circle" width={25} height={0} className="w-[15px]" />
           </div>
           <h1 className='text-[85px] leading-[95px] font-semibold z-[10]'>
             Where Web3 
