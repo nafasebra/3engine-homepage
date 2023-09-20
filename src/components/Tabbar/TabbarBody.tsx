@@ -1,7 +1,7 @@
 import React from "react";
 
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 import { EmailIcon, EmailStarIcon, SendIcon } from "@/assets/icons";
 import Style from "./Tabbar.module.css";
@@ -11,32 +11,46 @@ interface PropType {
   state: tabType;
 }
 
+interface formDataType {
+  email: string;
+  inviterEmail: string;
+}
+
 function TabbarBody(props: PropType) {
   const { state } = props;
-  
+
   const validationSchema = Yup.object().shape({
     email: Yup.string()
-    .email('Invalid email address')
-    .required('Email is required'),
+      .email("Invalid email address")
+      .required("Email is required"),
     inviterEmail: Yup.string()
-    .email('Invalid email address')
-    .required('Inviter email is required'),
+      .email("Invalid email address")
+      .required("Inviter email is required"),
   });
-  
+
+  const handleSubmit = async (values: formDataType) => {
+    // to handle state must do on here.
+    fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) => {
+      if (!res.ok) {
+        throw Error("Network response was not ok");
+      } else {
+        console.log(res.json());
+        console.log(values);
+      }
+    });
+  };
+
   const formik = useFormik({
     initialValues: {
-      email: '',
-      inviterEmail: '',
+      email: "",
+      inviterEmail: "",
     },
     validationSchema,
-    onSubmit: (values) => {
-      // Handle form submission here
-      console.log(values);
-    },
+    onSubmit: handleSubmit,
   });
 
   return (
-    <form className={Style.tabbar_body}>
+    <form onSubmit={formik.handleSubmit} className={Style.tabbar_body}>
       <div className={Style.tabbar_input__container}>
         <label htmlFor="email" className={Style.tabbar_input__label}>
           <EmailIcon />
