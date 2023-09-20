@@ -13,7 +13,7 @@ import pinkCircle from '@/assets/images/circle-pink.svg';
 function Header() {
   return (
     <header className={Style.header}>
-      <Container otherClass="flex flex-col gap-10 py-16 min-h-[calc(100vh+400px)]">
+      <Container otherClass="flex flex-col gap-10 py-16 min-h-[calc(100vh+200px)]">
         <div className='relative w-full max-w-[892px] mx-auto'>
           <div className='absolute top-[130px] -left-[50px] -z-[3]'>
             <Image src={threeDBox} alt="3dBox" width={250} height={0} className="w-[150px]" />
