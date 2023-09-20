@@ -1,0 +1,1 @@
+export type tabType = 'join' | 'leaderborad' | 'friends';

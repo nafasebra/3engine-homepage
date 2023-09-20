@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 
 import Style from './Header.module.css'
-import { Container } from '..'
+import { Container, Tabbar } from '..'
 
 import threeDBox from '@/assets/images/3d-box-colorize.png';
 import laptopImage from '@/assets/images/laptop-homepage.png';
@@ -45,6 +45,8 @@ function Header() {
             Be Among the First Creators on 3engine
           </p>
         </div>
+
+        <Tabbar />
       </Container>
     </header>
   )
