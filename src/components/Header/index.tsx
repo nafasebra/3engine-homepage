@@ -46,7 +46,9 @@ function Header() {
           </p>
         </div>
 
-        <Tabbar />
+        <div className='w-full max-w-[930px] mx-auto mt-20'>
+          <Tabbar />
+        </div>
       </Container>
     </header>
   )

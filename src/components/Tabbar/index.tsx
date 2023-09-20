@@ -18,10 +18,10 @@ function Tabbar() {
   }
 
   return (
-    <div>
+    <>
       <TabbarButtons handleChange={changeState} state={stateTab} />
       <TabbarBody />
-    </div>
+    </>
   )
 }
 

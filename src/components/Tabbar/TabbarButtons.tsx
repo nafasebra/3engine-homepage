@@ -16,7 +16,7 @@ function TabbarButtons(props: PropType) {
           handleChange("join");
         }}
         type="button"
-        className={`${state === "join" ? "bg-white text-blue-600" : "bg-blue-600 text-white"} text-center py-4 px-6 transition-colors rounded-tl-2xl`}
+        className={`${state === "join" ? "bg-white text-primary" : "bg-primary text-white"} text-center py-4 px-6 transition-colors rounded-tl-2xl`}
       >
         join
       </button>
@@ -25,7 +25,7 @@ function TabbarButtons(props: PropType) {
           handleChange("leaderborad");
         }}
         type="button"
-        className={`${state === "leaderborad" ? "bg-white text-blue-600" : "bg-blue-600 text-white"} text-center py-4 px-6 transition-colors`}
+        className={`${state === "leaderborad" ? "bg-white text-primary" : "bg-primary text-white"} text-center py-4 px-6 transition-colors`}
       >
         Leaderboards
       </button>
@@ -34,7 +34,7 @@ function TabbarButtons(props: PropType) {
           handleChange("friends");
         }}
         type="button"
-        className={`${state === "friends" ? "bg-white text-blue-600" : "bg-blue-600 text-white"} text-center py-4 px-6 transition-colors rounded-tr-2xl`}
+        className={`${state === "friends" ? "bg-white text-primary" : "bg-primary text-white"} text-center py-4 px-6 transition-colors rounded-tr-2xl`}
       >
         Your Friends
       </button>
