@@ -1,3 +1,16 @@
-.tabbar_container {
-  @apply flex;
+/* tabbar body */
+.tabbar_body {
+  @apply relative px-8 pt-8 pb-24 lg:py-8 lg:pl-8 lg:pr-16 rounded-b-2xl lg:rounded-tr-2xl bg-white overflow-hidden flex flex-col lg:flex-row items-center gap-8;
+}
+.tabbar_input__container {
+  @apply w-full lg:w-[40%] flex flex-col gap-3;
+}
+.tabbar_input__label {
+  @apply flex items-center gap-3 text-black;
+}
+.tabbar_input__textbox {
+  @apply w-full border-none outline-none text-gray-900;
+}
+.tabbar_submit {
+  @apply absolute left-0 top-auto lg:left-auto lg:top-0 right-0 bottom-0 text-white bg-primary flex flex-row lg:flex-col items-center lg:items-start justify-center gap-3 w-full lg:w-auto px-4 py-4 lg:px-10 lg:py-2 shadow-[-46px_15px_42px_rgba(0,120,242,0.35)] hover:bg-primary/75 transition-colors;
 }
