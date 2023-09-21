@@ -25,4 +25,6 @@ function Tabbar() {
   )
 }
 
+Tabbar.displayName = "Tabbar";
+
 export default Tabbar

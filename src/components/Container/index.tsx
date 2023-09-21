@@ -15,4 +15,6 @@ function Container(props: PropType) {
   )
 }
 
+Container.displayName = "Container";
+
 export default Container

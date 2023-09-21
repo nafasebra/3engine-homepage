@@ -16,20 +16,25 @@ interface formDataType {
   inviterEmail: string;
 }
 
+const validationSchema = Yup.object().shape({
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  inviterEmail: Yup.string()
+    .email("Invalid email address")
+    .required("Inviter email is required"),
+});
+
 function TabbarBody(props: PropType) {
   const { state } = props;
 
-  const validationSchema = Yup.object().shape({
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    inviterEmail: Yup.string()
-      .email("Invalid email address")
-      .required("Inviter email is required"),
-  });
-
   const handleSubmit = async (values: formDataType) => {
     // to handle state must do on here.
+    // switch(state) {
+    //   case 'join': do somthing
+    //   case 'invited': do somthing
+    //   case 'firends': do somthing
+    // }
     fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) => {
       if (!res.ok) {
         throw Error("Network response was not ok");
